@@ -1,0 +1,136 @@
+.BgCategory { 
+    background-color: #ffffff;  /* Белый фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container1 {
+    display: grid;
+    grid-template-columns: 1fr 4fr;  /* Два столбца с различными размерами */
+    width: 100%;
+}
+
+.item1 {
+    width: 230px;
+    padding: 0;  /* Убираем отступы для контейнера */
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Легкая тень для блока */
+}
+
+.item1:hover{
+    box-shadow: 0 0 0 10000px rgba(20, 20, 20, 0.8);
+    z-index: 1000;
+}
+
+.category-menu {
+    padding: 0;  /* Убираем внутренние отступы */
+    margin: 0;  /* Убираем внешние отступы */
+    list-style: none; /* Убираем маркеры (точки) */
+}
+
+.category-item {
+    color: rgb(40, 40, 40);
+    font-size: 12px;
+    padding-left: 15px; /* Увеличиваем внутренний отступ для увеличения области */
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0;  /* Убираем внешние отступы */
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;  /* Заставляем каждый элемент занимать всю ширину */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #000000;  /* Белый текст */
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .grid-containe1 {
+        grid-template-columns: 1fr;  /* Один столбец для экранов меньше 900px */
+    }
+
+    .item1 {
+        display: none;  /* Скрытие первой ячейки на мобильных */
+    }
+
+    .BgCategory {
+        height: auto;
+    }
+}
+
+.item2{
+    height: 100%;
+}
+
+
+.item2 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+.grid-container1 {
+    display: grid;
+    grid-template-columns: 1fr 4fr; /* Изначально два столбца */
+    width: 100%;
+}
+
+.item1 {
+    width: 230px;
+    padding: 0;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.item2 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+/* Убедимся, что карусель растягивается */
+.item2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Адаптивное поведение */
+@media (max-width: 1300px) {
+    .grid-container1 {
+        grid-template-columns: 1fr; /* Один столбец, когда экран меньше 900px */
+    }
+
+    .item1 {
+        display: none;
+    }
+
+    .item2 {
+        width: 100%;
+        height: auto; /* Позволяем элементу расшириться */
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        object-fit: cover;
+    }
+}

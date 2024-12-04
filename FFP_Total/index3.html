@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="css/Info_styles.css">
+<link rel="stylesheet" href="css/catalog_styles.css">
+<link rel="stylesheet" href="css/product.css">
+<link rel="stylesheet" href="css/all.css">
+    <style>
+        .header-placeholder {
+            background-color: #007bff;
+            height: 150px;
+        }
+
+        .breadcrumb {
+            background-color: transparent;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .breadcrumb-item.active {
+            color: #6c757d;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .news-card:hover {
+            transform: scale(1.02);
+        }
+
+        .news-card__image {
+            height: 200px;
+            background-color: #dee2e6;
+        }
+
+        .news-card__content {
+            padding: 15px;
+        }
+
+        .news-card__title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .news-card__description {
+            font-size: 14px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <div class="header">
+        <div class="norm">
+            <div class="info MaxW">
+                <div class="dropdown">
+                    <a class="dropdown-button"><img class="city-img img-city" src="img/city.png"
+                            alt="city_img">Одеса<img class="down-img img-down" src="img/down.png"
+                            alt="doen_img"></a>
+                    <div class="dropdown-content">
+                        <p class="item-1 city-name">Ваше місто: <b>Одеса</b> </p>
+                        <input class="item-1" type="text" id="city" name="city" placeholder="Ввеліть ваше місто"
+                            required>
+                        <a href="#">Київ</a>
+                        <a href="#">Дніпро</a>
+                        <a href="#">Харків</a>
+                        <a href="#">Львів</a>
+                        <a class="sel-city" href="#">Одеса</a>
+                        <a href="#">Запоріжжя</a>
+                        <a href="#">Кривий Ріг</a>
+                        <a href="#">Полтава</a>
+                        <a href="#">Хмельницький</a>
+                        <a href="#">Вінниця</a>
+                        <a href="#">Рівне</a>
+                        <a href="#">Тернопіль</a>
+                        <a href="#">Чернівці</a>
+                        <a href="#">Житомир</a>
+                        <a href="#">Луцьк</a>
+                        <a href="#">Івано-Франківськ</a>
+                        <a href="#">Кропівницький</a>
+                        <a href="#">Черкаси</a>
+                        <a href="#">Ужгород</a>
+                        <p class="item-1 help">Вибір міста допоможе відображати актуальну інформацію про наявність
+                            товарів
+                            ми не крадемо ваші данні і точно не приідемо до вас в гості</p>
+                    </div>
+                </div>
+
+                <div>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Магазин</a></li>
+                            <li><a href="#">Акції</a></li>
+                            <li><a href="#">Бонуси</a></li>
+                            <li><a href="#">Обмін</a></li>
+                            <li><a href="#">Новини</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="dropdown">
+                    <a class="contact" style="margin-right: 15px;"><img class="phone-img img-phone"
+                            src="img/phone.png" alt="phone_img">
+                        Зв'язатися
+                        з
+                        нами<img class="down-img img-down" src="img/down.png" alt="doen_img"></a>
+
+                    <div class="dropdown-content2">
+                        <a href="#"><img class="viber-img img-contact" src="img/viber.png" alt="viber_img">Viber</a>
+                        <a href="#"><img class="telegram-img img-contact" src="img/telegram.png"
+                                alt="telegram_img">Telegram</a>
+                        <a href="#"><img class="telephone-img img-contact" src="img/telephone.png"
+                                alt="telephone_img">1
+                            100
+                            100 100</a>
+                        <a href="#"><img class="telephone-img img-contact" src="img/telephone.png"
+                                alt="telephone_img">2
+                            200
+                            200 200</a>
+
+                        <p class="help">Гаряча лінія<br>
+                            На зв'язку з вами<br>
+                            щодня з 7:00 до 23:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class=" MyBg ">
+            <div class="container-fluid MaxW">
+
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Logo</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#"><img
+                                            src="img/account.png" alt="" style="height: 18px;"></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#"><img src="img/like.png"
+                                            alt="" style="height: 18px;"></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index2_form/index2.html"><img src="img/cart.png"
+                                            alt="" style="height: 18px;"></a>
+                                </li>
+
+
+
+                            </ul>
+                            <form class="d-flex search-form" role="search">
+                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+
+
+            </div>
+
+
+    </div>
+    </nav>
+
+</div>
+</nav>
+</div>
+
+    <div class="container mt-4">
+        <!-- Хлебные крошки -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Новости</li>
+            </ol>
+        </nav>
+
+        <!-- Заголовок страницы -->
+        <h1 class="mb-4">Новости</h1>
+
+        <!-- Грид с новостями -->
+        <div class="news-grid">
+            <div class="news-card">
+                <div class="news-card__image"></div>
+                <div class="news-card__content">
+                    <div class="news-card__title">Заголовок новости 1</div>
+                    <div class="news-card__description">Краткое описание первой новости. Узнайте больше, перейдя по ссылке.</div>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-card__image"></div>
+                <div class="news-card__content">
+                    <div class="news-card__title">Заголовок новости 2</div>
+                    <div class="news-card__description">Краткое описание второй новости. Узнайте больше, перейдя по ссылке.</div>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-card__image"></div>
+                <div class="news-card__content">
+                    <div class="news-card__title">Заголовок новости 3</div>
+                    <div class="news-card__description">Краткое описание третьей новости. Узнайте больше, перейдя по ссылке.</div>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-card__image"></div>
+                <div class="news-card__content">
+                    <div class="news-card__title">Заголовок новости 4</div>
+                    <div class="news-card__description">Краткое описание четвертой новости. Узнайте больше, перейдя по ссылке.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>

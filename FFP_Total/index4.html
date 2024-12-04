@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница товара</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="css/Info_styles.css">
+<link rel="stylesheet" href="css/catalog_styles.css">
+<link rel="stylesheet" href="css/product.css">
+<link rel="stylesheet" href="css/all.css">
+    <style>
+        .breadcrumb {
+            background-color: transparent;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+        }
+
+        .breadcrumb-item.active {
+            color: #000000;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product-image {
+            flex: 1 1 40%;
+            max-width: 400px;
+            background-color: #dee2e6;
+            height: 400px;
+            border-radius: 5px;
+        }
+
+        .product-details {
+            flex: 1 1 55%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            font-size: 16px;
+            color: #6c757d;
+        }
+
+        .product-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #d40000;
+        }
+
+        .product-characteristics {
+            margin-top: 30px;
+        }
+
+        .characteristics-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .characteristics-list li {
+            background-color: #f8f9fa;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Хедер -->
+    <div class="grid-container">
+
+
+        <div class="header">
+            <div class="norm">
+                <div class="info MaxW">
+                    <div class="dropdown">
+                        <a class="dropdown-button"><img class="city-img img-city" src="img/city.png"
+                                alt="city_img">Одеса<img class="down-img img-down" src="img/down.png"
+                                alt="doen_img"></a>
+                        <div class="dropdown-content">
+                            <p class="item-1 city-name">Ваше місто: <b>Одеса</b> </p>
+                            <input class="item-1" type="text" id="city" name="city" placeholder="Ввеліть ваше місто"
+                                required>
+                            <a href="#">Київ</a>
+                            <a href="#">Дніпро</a>
+                            <a href="#">Харків</a>
+                            <a href="#">Львів</a>
+                            <a class="sel-city" href="#">Одеса</a>
+                            <a href="#">Запоріжжя</a>
+                            <a href="#">Кривий Ріг</a>
+                            <a href="#">Полтава</a>
+                            <a href="#">Хмельницький</a>
+                            <a href="#">Вінниця</a>
+                            <a href="#">Рівне</a>
+                            <a href="#">Тернопіль</a>
+                            <a href="#">Чернівці</a>
+                            <a href="#">Житомир</a>
+                            <a href="#">Луцьк</a>
+                            <a href="#">Івано-Франківськ</a>
+                            <a href="#">Кропівницький</a>
+                            <a href="#">Черкаси</a>
+                            <a href="#">Ужгород</a>
+                            <p class="item-1 help">Вибір міста допоможе відображати актуальну інформацію про наявність
+                                товарів
+                                ми не крадемо ваші данні і точно не приідемо до вас в гості</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <nav>
+                            <ul>
+                                <li><a href="#">Магазин</a></li>
+                                <li><a href="#">Акції</a></li>
+                                <li><a href="#">Бонуси</a></li>
+                                <li><a href="#">Обмін</a></li>
+                                <li><a href="#">Новини</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="dropdown">
+                        <a class="contact" style="margin-right: 15px;"><img class="phone-img img-phone"
+                                src="img/phone.png" alt="phone_img">
+                            Зв'язатися
+                            з
+                            нами<img class="down-img img-down" src="img/down.png" alt="doen_img"></a>
+
+                        <div class="dropdown-content2">
+                            <a href="#"><img class="viber-img img-contact" src="img/viber.png" alt="viber_img">Viber</a>
+                            <a href="#"><img class="telegram-img img-contact" src="img/telegram.png"
+                                    alt="telegram_img">Telegram</a>
+                            <a href="#"><img class="telephone-img img-contact" src="img/telephone.png"
+                                    alt="telephone_img">1
+                                100
+                                100 100</a>
+                            <a href="#"><img class="telephone-img img-contact" src="img/telephone.png"
+                                    alt="telephone_img">2
+                                200
+                                200 200</a>
+
+                            <p class="help">Гаряча лінія<br>
+                                На зв'язку з вами<br>
+                                щодня з 7:00 до 23:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class=" MyBg ">
+                <div class="container-fluid MaxW">
+
+                    <nav class="navbar navbar-expand-lg ">
+                        <div class="container-fluid">
+                            <a class="navbar-brand logo" href="#">Logo</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <!-- Account Icon with Hover to Show Modal -->
+                                    <li class="nav-item">
+                                        <a class="nav-link active headerImg" href="#" data-bs-toggle="modal" data-bs-target="#authModal">
+                                            <img src="img/account.png" alt="" style="height: 18px;">
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active headerImg" aria-current="page" href="#"><img
+                                                src="img/like.png" alt="" style="height: 18px;"></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active headerImg" aria-current="page"
+                                            href="index2_form/index2.html"><img src="img/cart.png" alt="" style="height: 18px;"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Modal for Authentication -->
+                        <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" style="max-width: 400px;"> <!-- Smaller modal size -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-center" id="authModalLabel" style="color: #8B0000;">Вхід</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Authentication Form -->
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="phone" class="form-label">Номер телефону</label>
+                                                <input type="tel" class="form-control" id="phone" placeholder="+38(0__) __-__-__" required>
+                                            </div>
+                                            <button type="submit" class="btn btn-danger w-100">Увійти</button>
+                                            <div class="text-center mt-3">або</div>
+                                            <div class="d-grid gap-2">
+                                                <!-- Серые кнопки с кастомными стилями -->
+                                                <button type="button" class="btn custom-gray-btn">Логін та пароль</button>
+                                                <button type="button" class="btn custom-gray-btn">Google</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                                </ul>
+                                <form class="d-flex search-form" role="search">
+                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                    <button class="btn" type="submit"><img src="img/search.png" alt=""
+                                            style="height: 16px;"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+
+
+                </div>
+
+
+        </div>
+        </nav>
+    </div>
+    </nav>
+    </div>
+    </div>
+
+    <div class="container mt-4">
+        <!-- Хлебные крошки -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                <li class="breadcrumb-item"><a href="#">Категории</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Название товара</li>
+            </ol>
+        </nav>
+
+        <!-- Заголовок страницы -->
+        <h1 class="product-title">Название товара</h1>
+
+        <!-- Блок с изображением и описанием -->
+        <div class="product-container">
+            <div class="product-image"></div>
+            <div class="product-details">
+                <div class="product-description">
+                    Краткое описание товара. Это может быть информация о его функциях, особенностях и преимуществах.
+                </div>
+                <div class="product-price">Цена: 12 000</div>
+                <button class="btn btn-danger">Купить</button>
+            </div>
+        </div>
+
+        <!-- Характеристики товара -->
+        <div class="product-characteristics">
+            <h2>Характеристики</h2>
+            <ul class="characteristics-list">
+                <li>Характеристика 1: Значение</li>
+                <li>Характеристика 2: Значение</li>
+                <li>Характеристика 3: Значение</li>
+                <li>Характеристика 4: Значение</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>

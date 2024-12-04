@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/Info_styles.css">
+    <link rel="stylesheet" href="css/catalog_styles.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/all.css">
+
+    <style>
+         .marquee {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #505050;
+            background-color: #dfdfdf;
+            padding: 10px;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <div class="norm">
+                <div class="info MaxW">
+                    <div class="dropdown">
+                        <!-- Dropdown для города -->
+                        <a class="dropdown-button"><img class="city-img img-city" src="img/city.png" alt="city_img">Одеса<img class="down-img img-down" src="img/down.png" alt="down_img"></a>
+                        <div class="dropdown-content">
+                            <p class="item-1 city-name">Ваше місто: <b>Одеса</b> </p>
+                            
+                            <input class="item-1" type="text" id="city" name="city" placeholder="Введіть ваше місто"
+                                required>
+                            <a href="#">Київ</a>
+                            <a href="#">Дніпро</a>
+                            <a href="#">Харків</a>
+                            <a href="#">Львів</a>
+                            <a class="sel-city" href="#">Одеса</a>
+                            <a href="#">Запоріжжя</a>
+                            <a href="#">Кривий Ріг</a>
+                            <a href="#">Полтава</a>
+                            <a href="#">Хмельницький</a>
+                            <a href="#">Вінниця</a>
+                            <a href="#">Рівне</a>
+                            <a href="#">Тернопіль</a>
+                            <a href="#">Чернівці</a>
+                            <a href="#">Житомир</a>
+                            <a href="#">Луцьк</a>
+                            <a href="#">Івано-Франківськ</a>
+                            <a href="#">Кропівницький</a>
+                            <a href="#">Черкаси</a>
+                            <a href="#">Ужгород</a>
+                            <p class="item-1 help">Вибір міста допоможе відображати актуальну інформацію про наявність
+                                товарів
+                                ми не крадемо ваші данні і точно не приідемо до вас в гості</p>
+                        </div>
+                    </div>
+                    <div>
+                        <nav>
+                            <ul>
+                                <li><a href="#">Магазин</a></li>
+                                <li><a href="#">Акції</a></li>
+                                <li><a href="#">Бонуси</a></li>
+                                <li><a href="#">Обмін</a></li>
+                                <li><a href="#">Новини</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="dropdown">
+                        <a class="contact" style="margin-right: 15px;"><img class="phone-img img-phone"
+                                src="img/phone.png" alt="phone_img">
+                            Зв'язатися
+                            з
+                            нами<img class="down-img img-down" src="img/down.png" alt="doen_img"></a>
+
+                        <div class="dropdown-content2">
+                            <a href="#"><img class="viber-img img-contact" src="img/viber.png" alt="viber_img">Viber</a>
+                            <a href="#"><img class="telegram-img img-contact" src="img/telegram.png"
+                                    alt="telegram_img">Telegram</a>
+                            <a href="#"><img class="telephone-img img-contact" src="img/telephone.png"
+                                    alt="telephone_img">1
+                                100
+                                100 100</a>
+                            <a href="#"><img class="telephone-img img-contact" src="img/telephone.png"
+                                    alt="telephone_img">2
+                                200
+                                200 200</a>
+
+                            <p class="help">Гаряча лінія<br>
+                                На зв'язку з вами<br>
+                                щодня з 7:00 до 23:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+    
+            <nav class="MyBg">
+                <div class="container-fluid MaxW">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                            <a class="navbar-brand logo" href="#">Logo</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active headerImg" href="#" data-bs-toggle="modal" data-bs-target="#authModal">
+                                            <img src="img/account.png" alt="" style="height: 18px;">
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active headerImg" aria-current="page" href="#"><img src="img/like.png" alt="" style="height: 18px;"></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active headerImg" aria-current="page" href="index2_form/index2.html"><img src="img/cart.png" alt="" style="height: 18px;"></a>
+                                    </li>
+                                </ul>
+    
+                                <!-- Строка поиска внутри бургер-меню -->
+                                <form class="d-flex search-form" role="search">
+                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                    <button class="btn" type="submit"><img src="img/search.png" alt="" style="height: 16px;"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </div>
+    
+
+
+
+    <div class="n">
+
+        <div class="normii r" style="margin-top: 10px;">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Головна</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Головна</li>
+                </ol>
+            </nav>
+        </div>
+
+
+        <div class="BgCategory normii">
+            <div class="grid-container1">
+                <div class="item1">
+                    <ul class="category-menu">
+                        <li class="category-item">Смартфоны</li>
+                        <li class="category-item">Ноутбуки</li>
+                        <li class="category-item">Телевизоры</li>
+                        <li class="category-item">Планшеты</li>
+                        <li class="category-item">Игровые консоли</li>
+                        <li class="category-item">Часы</li>
+                        <li class="category-item">Наушники</li>
+                        <li class="category-item">Фотокамеры</li>
+                        <li class="category-item">Мебель</li>
+                        <li class="category-item">Бытовая техника</li>
+                        <li class="category-item">Наушники</li>
+                        <li class="category-item">Фотокамеры</li>
+                        <li class="category-item">Мебель</li>
+                        <li class="category-item">Бытовая техника</li>
+                    </ul>
+                </div>
+                <div class="item2">
+                    <!-- Bootstrap карусель -->
+                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/ad2.jpg" class="d-block w-100" alt="Картинка 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/ad1.jpg" class="d-block w-100" alt="Картинка 2">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Предыдущий</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Следующий</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <div class="normii">
+        <marquee class="marquee" behavior="scroll" direction="left">
+            Внимание! 🔥 Большая распродажа в нашем магазине электроники! Скидки до 50% на смартфоны, ноутбуки и телевизоры! 🎧 Купите сейчас и получите подарки к каждому заказу! 🚚 Бесплатная доставка при покупке от 10 000 рублей! Успейте! Акция действует до конца месяца! 💻 Подробности на сайте или в нашем магазине!
+        </marquee>
+        </div>
+
+        <div class="normii" style="font-weight: bold; font-size: 16px; padding-top: 10px; padding-bottom: 10px;">Лідери продажу</div>
+
+        <div class="normii normiii no">
+            <div class="menu-button">Топ товари</div>
+            <div class="menu-button">Телефоны</div>
+            <div class="menu-button">Ноутбуки</div>
+            <div class="menu-button">Побутова техніка</div>
+            <div class="menu-button">Зарядні станціЇ</div>
+            <div class="menu-button">Планшети</div>
+            <div class="menu-button">Смарт годинники</div>
+            <div class="menu-button">Ігрові консолі</div>
+            <div class="menu-button">Мультипечі</div>
+            <div class="menu-button">Apple</div>
+            <div class="menu-button">Навушники</div>
+            <div class="menu-button">Іграшки для дітей</div>
+            <div class="menu-button">Авто</div>
+        </div>
+
+
+        <div class="product-grid normii">
+            <div class="product-card">
+                <a href="ii.html"><img src="img/card_img/card-t-1.webp" alt=""></a>
+                <div class="grid-container-card">
+                    <div class="title">Smartphone X21 Ultra+</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★★ 4.7</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">799 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;" ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="product-card">
+                <img src="img/card_img/card-t-2.webp" alt="">
+                <div class="grid-container-card">
+                    <div class="title">Laptop Pro Max 15</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★☆ 4.3</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">1200 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="product-card">
+                <img src="img/card_img/card-t-3.webp" alt="">
+                <div class="grid-container-card">
+                    <div class="title">Headphones NoiseX 300</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★★ 4.9</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">299 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="product-card">
+                <img src="img/card_img/card-t-4.jpg" alt="">
+                <div class="grid-container-card">
+                    <div class="title">Smartwatch Active Fit</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★☆ 4.4</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">199 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="product-card">
+                <img src="img/card_img/card-t-5.jpg" alt="">
+                <div class="grid-container-card">
+                    <div class="title">Gaming Console Z300</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★★ 5.0</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">499 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="img/card_img/card-t-6.jpg" alt="">
+                <div class="grid-container-card">
+                    <div class="title">Tablet Pro 12.9</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★★ 4.6</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">850 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="img/card_img/card-t-7.jpg" alt="">
+                <div class="grid-container-card">
+                    <div class="title">4K Smart TV</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★☆ 4.2</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">1500 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="img/card_img/card-t-8.webp" alt="">
+                <div class="grid-container-card">
+                    <div class="title">Gaming Headset HX99</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★★ 4.8</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">250 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="img/card_img/card-t-9.webp" alt="">
+                <div class="grid-container-card">
+                    <div class="title">Wireless Earbuds Pro</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★★ 4.9</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">180 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="img/card_img/card-t-10.webp" alt="">
+                <div class="grid-container-card">
+                    <div class="title">Smartphone Alpha Max</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★★ 4.7</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">999 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="product-card">
+                <img src="img/card_img/card-t-11.webp" alt="">
+                <div class="grid-container-card">
+                    <div class="title">Tablet X10 Pro</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★☆ 4.3</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">799 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="img/card_img/card-t-12.webp" alt="">
+                <div class="grid-container-card">
+                    <div class="title">Gaming Console X500</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★★ 4.8</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">599 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="img/card_img/card-t-13.jpg" alt="">
+                <div class="grid-container-card">
+                    <div class="title">Smartwatch Fit Pro</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★★ 4.9</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">299 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="img/card_img/card-t-14.webp" alt="">
+                <div class="grid-container-card">
+                    <div class="title">Laptop Ultra 15</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★☆ 4.5</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">1,299 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="img/card_img/card-t-15.webp" alt="">
+                <div class="grid-container-card">
+                    <div class="title">Headphones Noise X</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★★ 4.6</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">199 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="product-card">
+                <img src="img/card_img/card-t-16.jpg" alt="">
+                <div class="grid-container-card">
+                    <div class="title">Smartphone Alpha Max</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★★ 4.7</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">999 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="img/card_img/card-t-17.webp" alt="">
+                <div class="grid-container-card">
+                    <div class="title">Smartphone Alpha Max</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★★ 4.7</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">999 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="img/card_img/card-t-18.jpg" alt="">
+                <div class="grid-container-card">
+                    <div class="title">Smartphone Alpha Max</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★★ 4.7</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">999 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="img/card_img/card-t-19.webp" alt="">
+                <div class="grid-container-card">
+                    <div class="title">Smartphone Alpha Max</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★★ 4.7</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">999 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="img/card_img/card-t-20.jpg" alt="">
+                <div class="grid-container-card">
+                    <div class="title">Smartphone Alpha Max</div>
+                    <div class="stars-com">
+                        <div class="stars">★★★★★ 4.7</div>
+                        <div class="com"><img src="img/like-card-blue.png" alt="" style="height: 17px; width: 17px;" class="like-icon"></div>
+                    </div>
+                    <div class="price-button">
+                        <div class="number">999 $</div>
+                        <div class="btn-card-space">
+                            <button class="btn-card"><img src="img/cart.png" alt="" style="height: 17px; width: 17px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+
+
+                
+    </div>
+
+
+            <div class="bgF">
+                <div class="footer normii">
+                    <div class="footer-row"><a href="#">Вакансії</a></div>
+                    <div class="footer-row"><a href="#">Новини</a></div>
+                    <div class="footer-row"><a href="#">Про нас</a></div>
+                    <div class="footer-row"><a href="#">Мережа магазинів</a></div>
+                    <div class="footer-row"><a href="#">Контакти</a></div>
+
+                    <div class="footer-row"><a href="#">Доставка та оплата</a></div>
+                    <div class="footer-row"><a href="#">Гарантія та сервіс</a></div>
+                    <div class="footer-row"><a href="#">Питання та відповіді</a></div>
+                    <div class="footer-row"><a href="#">Умови сайту</a></div>
+                    <div class="footer-row"><a href="#">Питання та відповіді</a></div>
+                    <div class="footer-row"><a href="#">Аудіокниги</a></div>
+
+                    <div class="footer-row"><a href="#">Оплатити частинами</a></div>
+                    <div class="footer-row"><a href="#">Купити у кредит</a></div>
+                    <div class="footer-row"><a href="#">Подарункові сертифікати</a></div>
+                    <div class="footer-row"><a href="#">Експерт Онлайн</a></div>
+
+
+                    <div class="footer-row"><a href="#">Експерт Онлайн</a></div>
+                    <div class="footer-row"><a href="#">Сервіси</a></div>
+                    <div class="footer-row"><a href="#">Аудіокниги</a></div>
+                    <div class="footer-row"><a href="#">Бібліотека</a></div>
+                    <div class="footer-row"></div>
+
+                    <div class="footer-row"><a href="#">Маркетплейс</a></div>
+                    <div class="footer-row"><a href="#">Стати партнером</a></div>
+                    <div class="footer-row"><a href="#"></a></div>
+                    <div class="footer-row"><a href="#">Корпоративний відділ</a></div>
+                    <div class="footer-row"></div>
+                    <div class="footer-row"></div>
+                    <div class="footer-row"></div>
+
+                    <div class="footer-row footer-single-column">
+                        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                            <img src="Instagram_icon.png.webp" style="height: 50px; margin: 20px;" alt="Instagram">
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                            <img src="w512h5121380376600FlurryYouTube.png" style="height: 55px; margin: 20px;"
+                                alt="YouTube">
+                        </a>
+                        <a href="https://t.me/username" target="_blank" aria-label="Telegram">
+                            <img src="telegram_icon-icons.png" style="height: 50px; border-radius: 7px; margin: 20px;"
+                                alt="Telegram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
